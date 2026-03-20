@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>Mannan Computers | IT Consultancy and Digital Solutions</title>
+        <meta name="description" content="One of the Leading Indian Information Technolgy Company which provides you services in Online tools, App developement, cybersecurity, digital solutions and other IT services.">
+        <meta name="keywords" content="Mannan Computers, Mannan Computer, Mannan, Computers, App Developer, cybersecurity, firm, automation, digital solutions, software developers, India, IT, company, services, leading, digital, transformation, technology, consulting">
+        <meta name="author" content="Mannan Computers">
+        <meta name="canonical" href="http://www.mannancomputers.com">
+        <meta name="theme-color" content="#420eab">
+        <link rel="icon" href="graphics/headicon.png">
+        <link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="css/main-mobile.css">
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 601px)" href="css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://kit.fontawesome.com/3413927b1a.js" crossorigin="anonymous"></script>
+        <!--
+        <script type="text/javascript" src="scripts/main.js"></script>
+        <script src="libary/jquery-3.3.1.min.js"></script>1
+        <script src="libary/anime.min.js"></script>   -->
+        <meta property="og:site_name" content="Mannan Computers">
+        <meta property="og:url" content="www.mannancomputers.com">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="ig/og-cover-mannan-computers.jpg">
+        <meta property="og:title" content="Mannan Computers | IT Services and Digital Solutions">
+        <meta property="og:description" content="One of the Leading Indian Information Technolgy Company which provides you services in Online tools, App developement, cybersecurity, digital solutions and other IT services.">
+        <meta property="twitter:title" content="Mannan Computers | IT Services and Digital Solutions">
+        <meta property="twitter:description" content="One of the Leading Indian Information Technology Company which provides you services in Online tools, App developement, cybersecurity, digital solutions and other IT services">
+        <meta property="twitter:image" content="ig/og-cover-mannan-computers.jpg">
+    </head>
+    <body>  
+        <div id="mobhed">
+            <div id="mob-hd">
+            <a id="logo" href="https://mannancomputers.com"><img src="graphics/mannan-computers-logo.png" alt="Mannan Computers - Logo"></a>
+            <button id="but" onclick="mobnv()">
+                <span id="fbar"></span>
+                <span id="sbar"></span>
+                <span id="tbar"></span>
+            </button>
+            <div id="sidenav">
+                <span onclick="closemn()" id="close">
+                    X
+                </span>
+                <button class="dropdown-btn">I.T. Consultancy</button>
+                <div class="dropdown-container">
+                    <a href="digital-solutions.html">Digital Solutions</a>
+                    <a href="#">Digital Transformation</a>
+                    <a href="digital-solutions.html">Mobile App Development</a>
+                    <a href="digital-solutions.html">Website/Web-App Development</a>
+                    <a href="digital-solutions.html">SEO</a>
+                </div>
+                <button class="dropdown-btn">Design</button>
+                <div class="dropdown-container">
+                    <a href="#">Branding</a>
+                    <a href="#">Digital Marketing</a>
+                    <a href="#">UI/UX</a>
+                    <a href="#">Design Studio</a>
+                </div>
+                <button class="dropdown-btn">3D & Animation</button>
+                <div class="dropdown-container">
+                    <a href="#">Motion Graphics</a>
+                    <a href="#">Architects</a>
+                    <a href="#">Building Elevations</a>
+                    <a href="#">Interior Design</a>
+                </div>
+                <button class="dropdown-btn">Tools</button>
+                <div class="dropdown-container">
+                    <a href="products/resume-builder.html">Resume Builder</a>
+                    <a href="products/cover-letters.html">Cover Letters</a>
+                    <a href="products/Core.html">Core</a>
+                </div>
+                <button class="dropdown-btn">Downloads</button>
+                <div class="dropdown-container">
+                    <a href="#">Edmice (Available Soon)</a>
+                </div>
+                <button class="dropdown-btn">Assignments</button>
+                <div class="dropdown-container">
+                    <a href="#">Essay</a>
+                    <a href="#">Case Studies</a>
+                    <a href="#">Researches</a>
+                    <a href="#">Presentations (PPTs)</a>
+                    <a href="#">Get Assignments Help</a>
+                </div>
+                <button class="dropdown-btn">Online</button>
+                <div class="dropdown-container">
+                    <a href="courses.html">Online Classes (Video Confressing)</a>
+                    <a href="#">Edmice (Available Soon)</a>
+                    <a href="courses.html">Get Certified</a>
+                    <a href="verify-certificate.html">Verify Certificate</a>
+                </div>
+                <button class="dropdown-btn">Offline</button>
+                <div class="dropdown-container">
+                    <a href="#">Mannan Computers (Amritsar)</a>
+                    <a href="#">Apply Concessions</a>
+                </div>
+                <a class="mlinks" href="#">Blogs</a>
+                <a class="mlinks" href="#">Community</a>
+                <a class="mlinks" href="#">Contact</a>
+                <p id="stamp"></p>
+            </div>
+            </div>
+        </div> 
+        <script>
+function mobnv() {
+    var menu = document.getElementById('sidenav');
+    menu.style.height = "100%";
+}
+function closemn() {
+    var menu = document.getElementById('sidenav');
+    menu.style.height = "0";
+}
+
+var datt = new Date().getFullYear();
+document.getElementById('stamp').innerHTML = "©" + datt + " Mannan Computers"
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "flex") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "flex";
+    }
+  });
+}   
+
+        </script>
+        <div id="baseOne">
+            <header id="myHead">
+               <a id="logo" href="https://mannancomputers.com"><img src="graphics/mannan-computers-logo.png" alt="Mannan Computers - Logo"></a>
+               <nav class="navbar">
+                   <div class="dropdown">
+                        <button class="dropbtn">
+                            Services
+                        </button>
+                        <div class="dropdown-content">  
+                            <div class="header">
+                                <p>fulfilling your every industrial or corporative need</p>
+                            </div>
+                            <div class="row">
+                                <div class="column">
+                                    <h3>I.T. Consultancy</h3>
+                                    <a href="digital-solutions.html">Digital Solutions</a>
+                                    <a href="digital-solutions.html">Digital Transformation</a>
+                                    <a href="digital-solutions.html">Mobile APP Development</a>
+                                    <a href="digital-solutions.html">Website/Web-App Development</a>
+                                    <a href="digital-solutions.html">SEO</a>
+                                </div>
+                                <div class="column">
+                                    <h3>Design</h3>
+                                    <a href="#">Branding</a>
+                                    <a href="#">Digital Marketing</a>
+                                    <a href="#">UI/UX</a>
+                                    <a href="#">Design Studio (Logos, Posters Etc.)</a>
+                                </div>
+                                <div class="column">
+                                    <h3>3D & Animation</h3>
+                                    <a href="#">Motion Graphics</a>
+                                    <a href="#">Architects</a>
+                                    <a href="#">Building Elevations</a>
+                                    <a href="#">Interior Designing</a>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="dropdown">
+                        <button class="dropbtn">
+                            Products
+                        </button>
+                        <div class="dropdown-content">  
+                            <div class="header">
+                                <p>help you to complete your personal & professional tasks</p>
+                            </div>
+                            <div class="row">
+                                <div class="column">
+                                    <h3>Tools</h3>
+                                    <a href="products/resume-builder.html">Resume Builder</a>
+                                    <a href="products/cover-letters.html">Cover Letter</a>
+                                    <a href="products/core.html">Core</a>
+                                </div>
+                                <div class="column">
+                                    <h3>Downloads</h3>
+                                    <a href="#">Edmice (Avalaible Soon)</a>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="dropdown">
+                        <button class="dropbtn">
+                            Learn
+                        </button>
+                        <div class="dropdown-content">  
+                            <div class="header">
+                                <p>skill-based courses for students & developers</p>
+                            </div>
+                            <div class="row">
+                                <div class="column">
+                                    <h3>Assignments</h3>
+                                    <a href="#">Essays</a>
+                                    <a href="#">Case Studies</a>
+                                    <a href="#">Researches</a>
+                                    <a href="#">Presentations (PPT)</a>
+                                    <a href="#">Get Assignment Help</a>
+                                </div>    
+                                <div class="column">
+                                    <h3>Online</h3>
+                                    <a href="courses.html">Online Classes (Video Conferencing)</a>
+                                    <a href="#">Edmice (Avalaible Soon)</a>
+                                    <a href="courses.html">Get Certified</a>
+                                    <a href="verify-certificate.html">Verify Certificate</a>
+                                </div>
+                                <div class="column">
+                                    <h3>Offline</h3>
+                                    <a href="#">Mannan Computers (Amritsar)</a>
+                                    <a href="#">Apply Concessions</a>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="dropdown">
+                        <button class="dropbtn">
+                            Blogs
+                        </button>
+                        <div class="dropdown-content">  
+                            <div class="header">
+                                <p>get habit of reading</p>
+                            </div>
+                            <div class="row">
+                                <div class="column">
+                                    <a href="#">Artificial Intelligence | Everything about most talked trend of 21st century</a>
+                                    <a href="#">Facts about Indian Cyber-Security Industry</a>
+                                    <a href="#">Classifications of Dark Web</a>
+                                </div>
+                                <div class="column">
+                                    <a href="#">How to make professional resumes</a>
+                                    <a href="#">Importance of Logo for any brand</a>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="dropdown">
+                        <button id="sole" class="dropbtn">
+                            Community
+                        </button>                           
+                   </div>
+               </nav>    
+               <a id="hdbtn" href="contact.html">Contact</a>           
+            </header>
+        </div> 
+ 
+        <div id="baseTwo">
+            <video autoplay muted loop>
+                <source src="graphics/video.mp4" type="video/mp4">
+            </video>
+            <div id="baseTwo-tea">
+                <h1 id="botit">Making <span>technology</span> easy for all generations</h1>
+                <p id="bosub">I.T. Consultancy & Digital Solutions</p>
+            </div>
+        </div>     
+        <div id="latest-video">
+            <div id="lv-one">
+                <h2>Empowering Students and Developers</h2>
+                <hr>
+                <h3>Its All About Computers</h3>
+                <h4>An I.T. based approach to promote education and technical literacy</h4>
+            </div>
+            <div id="lv-two">
+            <iframe width="448" height="252" src="https://www.youtube.com/embed/H1is-vM293Q?si=aJMtRw1EUyHfUK3p" title="YouTube video player" frameborder="0" allow="autoplay"></iframe>
+            </div>
+        </div>
+        <div id="edmice">
+            <div id="etext">
+                <h2 id="bac">Learn to Program<br>with <span>EDMICE</span></h2>
+                <p>Various programming courses, tutorials, quizes, certifications and solo-batch online classes for individuals</p>
+                <h4>(Available Soon)</h4>
+            </div>
+            <div id="eimg">
+                <img id="em" src="graphics/index/edmice-cover.png" alt="Learn coding online with edmice">
+            </div>
+        </div>
+
+        <div id="on">
+            <div id="online">
+                <div id="onhead">
+                    <h3>Individually-Batched</h3>
+                    <h2>Online Classes for Students & Developers</h2>
+                </div>
+                <div id="onplate">
+                    <div>
+                        <p>Programming Languages</p>
+                        <img src="graphics/icons/learn-react-python.png" alt="Learn React and Python in Online Classes">
+                    </div>
+                    <div>
+                        <p>Business Accounting</p>
+                        <img src="graphics/icons/learn-business-accounting.png" alt="Learn Tally and Busy online">                        
+                    </div>
+                    <div>
+                        <p>AutoCAD and Photoshop</p>
+                        <img src="graphics/icons/learn-photoshop-autocad.png" alt="Learn Photoshop and autocad online classes">                        
+                    </div>
+                    <div>
+                        <p>Apps & Web Development</p>
+                        <img src="graphics/icons/learn-app-development.png" alt="Learn web and app development online classes">                        
+                    </div>
+                    <div>
+                        <p>Office and ERP Training</p>
+                        <img src="graphics/icons/learn-office-online-classes.png" alt="Learn powerpoint and excel online classes">                        
+                    </div>
+                </div>
+            </div>
+            <div id="form-online">
+                <h2>Register for Demo</h2>
+                <p>Class to be scheduled within next 24 hours.</p>
+                <form method="POST" action="<?php ?>" autocomplete="off">
+                    <label>Name</label>
+                    <input class="field" type="text" name="fullname" placeholder="Enter your fullname here" required>
+                    <label>Contact</label>
+                    <input class="field" type="text" name="contact" placeholder="Email or Phone Number" required>
+                        <label>I'm interested in</label>
+                        <div class="autocomplete">
+                            <input id="myInput" type="text" name="myCountry" placeholder="python, web development....">
+                        </div>
+                        <input type="submit" value="Request Demo">
+                        <a href="courses.html">Explore all courses</a>
+                </form>
+            </div>
+            </div>
+        </div>
+             <script>
+            var myHead = document.getElementById("myHead");
+            function runHead() {
+                myHead.style.display = "flex";
+                myHead.style.width = "60%";
+                myHead.style.marginLeft = "20%";
+            }
+            setTimeout(runHead, 2000);
+            var em = document.getElementById("em");
+          window.onscroll = () => {
+                if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+                    myHead.style.marginTop = "0px";
+                    myHead.style.width = "100%";
+                    myHead.style.marginLeft = "0px";
+                    myHead.style.borderRadius = 0;
+                    myHead.style.borderBottom = "2px solid #f5f5f5";
+                    myHead.style.boxShadow = "2px 2px 2px #999";
+                }
+                    var windWidth = window.innerWidth;
+                    if (windWidth > 868) {
+                        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+                        em.style.width = "90%";
+                        var edtext = document.getElementById('bac');
+                        edtext.style.opacity = 1;
+                        edtext.style.marginTop = 148;
+                        }
+                    } else {
+                        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                        em.style.width = "100%";
+                    }
+                } 
+                }           
+            </script>  
+
+
+<script>
+
+function autocomplete(inp, arr) {
+  var currentFocus;
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      this.parentNode.appendChild(a);
+      for (i = 0; i < arr.length; i++) {
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          b = document.createElement("DIV");
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          b.addEventListener("click", function(e) {
+              inp.value = this.getElementsByTagName("input")[0].value;
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        currentFocus++;
+        addActive(x);
+      } else if (e.keyCode == 38) { 
+        currentFocus--;
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        e.preventDefault();
+        if (currentFocus > -1) {
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    if (!x) return false;
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+var countries = ["Advanced MS Excel", "Advanced Excel", "MS Excel", "Web App", "Android App", "Microsost Excel", "Excel", "PowerPoint", "Fundamentals of Computers", "Computer Basics", "Basics of Computers", "Typing", "Punjabi Typing","Accounts", "Business Accounting with Tally", "Business Accounting with Busy", "Tax Classifications", "Tally ERP.9", "Tallyprime", "Busy Accounting Software", "Accounting","Commerce", "Graphic Designing", "Photoshop", "Graphic Designing with Photoshop", "UI/UX", "Designing", "Business General", "IT", "Information Technology", "Computer Science", "AutoCAD", "Civil Engineering","Coding", "Programming", "Python Programming", "Java Programming", "Python", "Java", "JavaScript", "PHP", "MySQL", "PHP & MySQL", "HTML&CSS", "HTML", "CSS", "JQuary", "ReactJS", "React Native", "App Developoment", "Mobile App Development", "Web Development","Website development","Software Engineering", "Software Programming", "Word", "Microsoft Word", "Microsoft PowerPoint", "Frontend Development", "Backend Development", "Computer Engineering", "Business", "Data Science", "Machine Learning", "Artificial Intelligence", "AI", "ML", "DL", "Android Studio", "Android App Development"];
+
+autocomplete(document.getElementById("myInput"), countries);
+
+
+</script>
+
+        <div id="resumes">
+            <div id="res-base1">
+                <p id="fr-say">YOUR <span>RECRUITER</span> WILL LOVE YOUR <span>RESUME.</span> TRUST ME.</p>
+                <p id="fr-say1">Seven Templates Representing 7 Continents</p>
+            </div>
+            <div id="res-base2">
+                <div id="rhead">
+                    <h1 id="main-resume"><b>RESUME BUILDER</b></h1>
+                    <p id="by-mc">BY MANNAN COMPUTERS</p>
+                    <a id="go-resume" href="resumes/resume-builder.html">Launching Soon &nbsp; &nbsp; &nbsp;→</a>
+                </div>
+                <div id="resume-modal">
+                    <div id="rm-head">
+                        <p id="tag">CV</p>
+                        <h2 id="mod"><b id="youguys">Your Name Here...</b></h2>
+                        <h5 id="pod" name="perOccup">Lead Designer</h5>
+                    </div>
+                    <div id="rm-body">
+                        <div class="modalside">
+                            <p id="rh1" class="modal-headings">Career Objectives</p>
+                            <p class="modal-paragraph">To work with a good professional organization which can give me an opportunity to enhance my strength and skills in conjuction with the goals and objectives of the institution along with enough scope to rise.</p>
+                            <p id="rh2" class="modal-headings">Education</p>
+                            <p class="modal-paragraph"><b>Diploma in Design Fundamentals</b></p>
+                            <p class="modal-paragraph">2022 • EDMICE</p>
+                        </div>
+                        <div class="modalside">
+                            <p id="rh3" class="modal-headings">Skills</p>
+                            <p class="modal-points">Photoshop<meter value="72" min="0" max="100"></meter><span> 72%</span></p>
+                            <p class="modal-points">Illustrator<meter value="68" min="0" max="100"></meter><span> 68%</span></p>
+                            <p class="modal-points">CoralDraw<meter value="78" min="0" max="100"></meter><span> 78%</span></p>
+                            <div id="color-panel">
+                                <div class="panelpoint">
+                                    <button id="cp1"></button>
+                                    <button id="cp2"></button>
+                                    <button id="cp3"></button>
+                                    <button id="cp4"></button>
+                                    <button id="cp5"></button>
+                                </div> 
+                                <div class="panelpoint">
+                                    <span style="font-family:'Times New Roman', Times, serif; border:1px solid #dbdbdb; padding:4px">Times New Roman</span>
+                                    <span style="font-family:monospace; border:1px solid #dbdbdb; padding:4px">Lucida Consoles</span>
+                                </div>                                   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    let newBack = document.getElementById('resume');
+                    let myButton = document.getElementById('go.')
+                </script>
+                <script>
+                    var resHead = document.getElementById('rm-head');
+                    var text1 = document.getElementById('mod');
+                    var text2 = document.getElementById('pod');
+                    var text3 = document.getElementById('rh1');
+                    var text4 = document.getElementById('rh2');
+                    var text5 = document.getElementById('rh3');
+                    let textShades = ["#350200", "#146c94", "#526d82", "#617a55", "#c07f00"];
+                    let backShades = ["#ffefe4", "#f6f1f1", "#dde6ed", "#fff8d6", "fff7d4"];
+                    
+                    function changeEffect() {
+                        for (let i = 0; i < textShades.length; i++) {
+                        var x = parseInt(Math.random() * textShades.length);
+                        resHead.style.background = backShades[x];
+                        text1.style.color = textShades[x];
+                        text2.style.color = textShades[x];
+                        text3.style.color = textShades[x];
+                        text4.style.color = textShades[x];
+                        text5.style.color = textShades[x];
+                    }
+                    }                    
+                    setInterval(changeEffect, 800);
+                </script>
+            </div>
+        </div>
+       <div id="res_classif">
+            <div class="rc_plate">
+                <p id="peter">Reviewed by HRs, Hiring Managers,<br>and Placement Agents</p>
+                <div class="animate">
+                    <span class="rv_asset">
+                        <img src="graphics/icons/rv_one.png" alt="Rajat Mannan">
+                        <p class="rv-text">Extraordinary templates and warm color scheme usually impress the interviewers and make your chances high to get selected.</p>
+                    </span>
+                    <p class="rv_title"><b>Angad Joshi</b><br>Tech Lead</p>
+                </div>
+                <div class="animate">
+                    <span class="rv_asset">
+                        <img src="graphics/icons/rv_two.png" alt="Rajat Mannan">
+                        <p class="rv-text">Extraordinary templates and warm color scheme usually impress the interviewers and make your chances high to get selected.</p>
+                    </span>
+                    <p class="rv_title"><b>Paras Prabhakar</b><br>Leader (Dark Wizards)</p>
+                </div>
+            </div>
+                </div>
+       <div id="read">
+            <h2 id="ins-head">Insights</h2>
+            <div id="new-div">
+            <div class="go-read">
+                <img src="graphics/Blogs/field-ai.jpg" alt="Artificial Intelligence at Mannan Computers">
+                <h2>Fields of AI and Which one you should select?</h2>
+                <p>Trends and Classifications of most talke......</p>
+                <a href="#">Continue reading</a>                
+            </div>
+            <div class="go-read">
+                <img src="graphics/Blogs/canada-courses.jpg" alt="Courses for International students in Canada">
+                <h2>Certifications that are highly demanded in Canada</h2>
+                <p>Trends and Classifications of most talke......</p>
+                <a href="#">Continue reading</a>                
+            </div>
+            <div class="go-read">
+                <img src="graphics/Blogs/data-science.jpg" alt="Data Science courses at Mannan Computers">
+                <h2>Data Science. (Where to begin) </h2>
+                <p>Trends and Classifications of most talke......</p>
+                <a href="#">Continue reading</a>                
+            </div>
+            </div>
+        </div>
+        <div id="news">
+            <div>
+                <h2>Get to know about our latest updates</h2>
+                <h4>New courses, tools and offers</h4>       
+            </div>
+            <div>
+                <form>
+                    <input id="newslet" type="text" name="news_email" placeholder="abc@yourmail.com" required>
+                    <input type="submit" name="send_nw" value="Subscribe">
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div id="ft-links">
+                <div>
+                    <h3>Digital Solutions</h3>
+                    <a href="digital-solutions.html">Services</a>
+                    <a href="#">Products</a>
+                    <a href="#">Branding</a>
+                    <a href="#">Design Studio</a>
+                </div>
+                <div>
+                    <h3>Learning</h3>
+                    <a href="#">Edmice (Available Soon)</a>
+                    <a href="#">Get Assignment help</a>
+                    <a href="#">Blogs</a>
+                </div>
+                <div>
+                    <h3>Company</h3>
+                    <a href="about">About</a>
+                    <a href="contact">Contact</a>
+                    <a href="privacy-policies">Privacy & Legals</a>
+                </div>
+            </div>
+            <div id="social">
+                <a href="https://www.instagram.com/mannancomputers/"><i class="fa-brands fa-instagram"></i></a>                
+                <a href="https://www.linkedin.com/company/mannan-computers/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://youtube.com/@mannancomputers"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div id="claim">
+                <hr>
+                <p id="stamplas">©</p>
+                <a href="privacy-policies">Privacy & Legals</a>
+            </div>
+        </footer>
+        <script>
+            var datt = new Date().getFullYear();
+            document.getElementById('stamplas').innerHTML = "©" + datt + " Mannan Computers"
+        </script>
+    </body>
+</html>
